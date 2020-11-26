@@ -55,7 +55,13 @@ export const App = () => {
         todoText={todoText}
         onChangeTodoText={onChangeTodoText}
         onClickAdd={onClickAdd}
+        disabled={incompleteTodos.length >= 8}
       />
+      {incompleteTodos.length >= 8 && (
+        <p style={{ color: "red", marginLeft: "15px" }}>
+          未完了リストに登録できるTODOは８個まで。
+        </p>
+      )}
       <IncompleteTodos
         incompleteTodos={incompleteTodos}
         onClickComplete={onClickComplete}
@@ -65,6 +71,7 @@ export const App = () => {
         completeTodos={completeTodos}
         onClickBack={onClickBack}
         onClickCompleteDelete={onClickCompleteDelete}
+        disabled={incompleteTodos.length >= 8}
       />
     </>
   );

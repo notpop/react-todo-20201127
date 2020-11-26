@@ -10,7 +10,7 @@ const style = {
 };
 
 export const CompleteTodos = (props) => {
-  const { completeTodos, onClickBack, onClickCompleteDelete } = props;
+  const { completeTodos, onClickBack, onClickCompleteDelete, disabled } = props;
   return (
     <div style={style}>
       <p className="title">完了のTODO</p>
@@ -19,7 +19,9 @@ export const CompleteTodos = (props) => {
           return (
             <div key={todo} className="list-row">
               <li>{todo}</li>
-              <button onClick={() => onClickBack(index)}>戻す</button>
+              <button onClick={() => onClickBack(index)} disabled={disabled}>
+                戻す
+              </button>
               <button onClick={() => onClickCompleteDelete(index)}>削除</button>
             </div>
           );
