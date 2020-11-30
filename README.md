@@ -9,3 +9,5 @@ Created with CodeSandbox
 結局これって MVC で組んでた時の Model 的な話だけど
 用途としてもっと完成したブロック的なイメージなのかなと思う。
 直接 blade で使われるレゴ
+
+heroku だとエラーでる？
